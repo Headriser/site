@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Визитка</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "g3_hWDmhXnGnpVvwn",
+      });
+   })();
+</script>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="container">
+        <header class="fade-in">
+            <h1>Обратная связь</h1>
+        </header>
+        
+        <nav class="navigation">
+            <a href="index.html">Главная</a>
+            <a href="game.html">Игра</a>
+            <a href="contact.html" class="selected-page">Контакты</a>
+        </nav>
+        <div class="line"></div>
+        <section class="contact-form slide-up">
+            <h2>Отправить сообщение</h2>
+            <form id="contactForm">
+                <label for="name">Имя</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Сообщение</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit" class="pulse-button">Отправить</button>
+            </form>
+        </section>
+        
+        <footer>
+            <p>&copy; <span id="currentYear"></span> Савельев Андрей 4 курс</p>
+        </footer>
+    </div>
+    
+    <script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>
